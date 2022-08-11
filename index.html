@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="Top.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap"/>
+<link rel="stylesheet" href="style.css?vsa">
+<script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+<title>Encriptador Alura</title>
+<style></style>
+</head>
+<body>
+
+   <header>
+      <img id="top" src="Top.png" alt="Logo Alura">
+   </header>
+   
+   <div class="contenedor">
+
+      <div class="area-input">
+         <textarea id="input" required placeholder="Ingrese el texto aquí"></textarea>
+         <span id="info"><span class="iconify" data-icon="akar-icons:circle-alert-fill"></span> solo letras minusculas y sin acentos</span>
+         <div class="botones">
+            <button id="encriptar">Encriptar</button>
+            <button id="desencriptar">Desencriptar</button>
+         </div>
+      </div>
+        
+      <div class="resultado">
+         <img src="muneco.png">
+         <div class="caja-textos">
+            <span class="h3">Ningun mensaje fue encontrado</span>
+            <span class="h4">Ingresa el texto que deseas encriptar o desencriptar.</span>
+         </div>
+         <div class="resultado-ver" style="display: none;">
+            <textarea id="resultado" disabled ></textarea>
+            <button id="copiar">Copiar</button>
+         </div>
+      </div>
+
+   </div>
+   <script src="script.js"></script>
+</body>
+</html>
