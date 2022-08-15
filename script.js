@@ -35,6 +35,8 @@ function generador(accion) {
    var letra = mensaje.value;
    // https://elcodigoascii.com.ar/
    var espacio = 32, empieza = 97, termina = 122;
+   // Volvemos a true
+   continuar = true;
    // https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
    letra.split('').filter(word => {
    	if((empieza > word.charCodeAt(0) || termina < word.charCodeAt(0)) && word.charCodeAt(0) != espacio) {
