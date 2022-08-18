@@ -9,12 +9,14 @@ boton_encriptar = document.getElementById("encriptar"),
 boton_desencriptar = document.getElementById("desencriptar"),
 boton_copiar = document.getElementById("copiar");
 
-mensaje.addEventListener('keyup', tecla => {
-	mostrar.style.display = 'none'
-   //Tecla para borrar y espacio permitidas
-   if (tecla.code === 'Backspace' || tecla.code === 'Space') return true;
-   // Solo acepta numeros y letras
-   return /[A-Za-z0-9]/.test(String.fromCharCode(tecla.keyCode));
+mensaje.addEventListener('keyup', e => {
+	// Forzamos a las mayusculas por las minusculas
+	nuevovalor = mensaje.value.toLowerCase();
+	// Obtenemos letra precionada
+	minLetra = e.key.toLowerCase()
+	// Reemplazamos números por vacio
+	nuevovalor = nuevovalor.replace(/[^a-z ]/g, "")
+	mensaje.value = nuevovalor
 })
 
 /**
@@ -33,11 +35,8 @@ var continuar = true;
 function generador(accion) {
 	var nuevo = [];
    var letra = mensaje.value;
-   // https://elcodigoascii.com.ar/
    var espacio = 32, empieza = 97, termina = 122;
-   // Volvemos a true
    continuar = true;
-   // https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
    letra.split('').filter(word => {
    	if((empieza > word.charCodeAt(0) || termina < word.charCodeAt(0)) && word.charCodeAt(0) != espacio) {
    		alert('No permitido: ' + word)
@@ -81,12 +80,13 @@ function generador(accion) {
 	}
 }
 
-async function copiar(){
+function copiar(){
+	const resultado = document.getElementById("resultado")
    resultado.removeAttribute("disabled")
    resultado.select();
    // Por alguna razón no me funciona
-  	// navigator.clipboard.writeText(resultado.value)
-  	if(document.execCommand("copy")) resultado.setAttribute("disabled", "")
+  	navigator.clipboard.writeText(resultado.value)
+  	// if(document.execCommand("copy")) resultado.setAttribute("disabled", "")
 }
 
 boton_encriptar.addEventListener('click', () => generador(true))
