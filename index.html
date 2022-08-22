@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es" class="">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="assets/images/logotipo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"/>
+<link rel="stylesheet" href="assets/css/style.css?encript=v1200">
+<script src="https://code.iconify.design/iconify-icon/1.0.0-beta.3/iconify-icon.min.js"></script>
+<title>Encriptador Alura</title>
+</head>
+<body>
+
+   <header>
+      <h1>Encriptador v1.2</h1>
+   </header>
+   
+   <div id="app">
+      <div class="container">
+         <div class="columns">
+            <div class="column left">
+               <div class="area">
+                  <textarea required placeholder="Ingrese el texto aquí"></textarea>
+                  <small><iconify-icon icon="akar-icons:circle-alert"></iconify-icon> solo letras minusculas y sin acentos</small>
+                  <div class="botones">
+                     <button class="boton" data-action="encriptar">Encriptar</button>
+                     <button class="boton" data-action="desencriptar">Desencriptar</button>
+                  </div>
+               </div>
+            </div>
+            <div class="column right">
+               <div class="resultado">
+                  <div class="caja-textos">
+                     <img src="assets/images/muneco.svg">
+                     <span class="h3">Ningun mensaje fue encontrado</span>
+                     <span class="h4">Ingresa el texto que deseas encriptar o desencriptar.</span>
+                  </div>
+                  <div class="resultado-ver" style="display: none;">
+                     <textarea style="pointer-events:none;" placeholder="Muestra del resultado" disabled ></textarea>
+                     <div class="botones">
+                        <button class="boton" data-action="copiar">Copiar</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <footer>
+      <div class="copyright">
+         <p class="foto">
+            Foto de <a href="https://www.pexels.com/es-es/foto/foto-de-persona-escribiendo-en-el-teclado-de-la-computadora-735911/" target="_blank" rel="noreferrer">Soumil Kumar</a>
+         </p>
+         <p>Copyright &copy; 2022</p>
+         <div class="redes">
+            <a href="https://www.linkedin.com/in/joelmiguelvalente" target="_blank" rel="noreferrer" class="linkedin"><iconify-icon icon="akar-icons:linkedin-box-fill"></iconify-icon></a>
+            <a href="https://github.com/joelmiguelvalente" target="_blank" rel="noreferrer" class="github"><iconify-icon icon="akar-icons:github-fill"></iconify-icon></a>
+            <a href="https://discord.com/users/465203938900049920" target="_blank" rel="noreferrer" class="discord"><iconify-icon icon="akar-icons:discord-fill"></iconify-icon></a>
+            <a href="https://facebook.com/joelmiguel.valente" target="_blank" rel="noreferrer" class="facebook"><iconify-icon icon="akar-icons:facebook-fill"></iconify-icon></a>
+            <a href="https://instagram.com/wickfondos" target="_blank" rel="noreferrer" class="instagram"><iconify-icon icon="akar-icons:instagram-fill"></iconify-icon></a>
+            <a href="https://twitter.com/JvalenteM92" target="_blank" rel="noreferrer" class="twitter"><iconify-icon icon="akar-icons:twitter-fill"></iconify-icon></a>
+         </div>
+      </div>
+   </footer>
+   <script src="assets/js/app.js"></script>
+</body>
+</html>
