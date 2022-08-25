@@ -16,4 +16,4 @@ Este encriptador tiene
  * Dos modos de encriptación Básica/Avanzada
  
 Nueva versión del encriptador en camino...
-[Nueva version](https://github.com/joelmiguelvalente/challengeencriptador/tree/secundario)
+[Nueva version](https://github.com/joelmiguelvalente/challengeencriptador/tree/master)
